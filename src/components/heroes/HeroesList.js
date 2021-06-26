@@ -3,10 +3,10 @@ import { getHeroesByPublisher } from '../selectors/getHero'
 import { HeroCard } from './HeroCard';
 
 export const HeroesList = ({ publisher }) => {
-    const heroes = getHeroesByPublisher(publisher);
+    const heroes = React.useMemo(() => getHeroesByPublisher(publisher), [publisher]);
 
     return (
-        <div className='card-columns'>
+        <div className='card-columns animate__animated animate__fadeIn'>
             <ul>
                 {
                     heroes.map(hero =>
