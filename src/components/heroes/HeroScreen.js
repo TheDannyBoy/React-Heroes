@@ -2,7 +2,7 @@ import React from 'react';
 import { Redirect, useParams } from 'react-router-dom';
 import { getHeroesById } from '../selectors/getHero';
 
-export const HeroeScreen = ({ history }) => {
+export const HeroScreen = ({ history }) => {
     const { heroId } = useParams();
     const hero = React.useMemo(() => getHeroesById(heroId), [heroId]);
 
