@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchScreen Should show correctly with default valules 1`] = `
+Array [
+  <div>
+    SearchScreen
+  </div>,
+  <hr />,
+  <div
+    className="row"
+  >
+    <div
+      className="col-12"
+    >
+      <h4>
+        Search Form
+      </h4>
+      <hr />
+      <form
+        onSubmit={[Function]}
+      >
+        <input
+          autoComplete="off"
+          className="form-control"
+          name="searchText"
+          onChange={[Function]}
+          placeholder="Find your hero..."
+          type="text"
+          value=""
+        />
+        <button
+          className="btn mt-1 btn-block btn-outline-primary"
+          type="submit"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+  </div>,
+  <div
+    className="row mt-5"
+  >
+    <div
+      className="col-12"
+    >
+      <h4>
+        Results
+      </h4>
+      <hr />
+      <div
+        className="alert alert-info"
+      >
+        No heroes to show
+      </div>
+    </div>
+  </div>,
+]
+`;

@@ -8,7 +8,7 @@ import { getHeroesByName } from '../selectors/getHero';
 export const SearchScreen = ({ history }) => {
     // Get the hero keyword from queryParam
     const { search } = useLocation();
-    const { q:query = '' } = queryString.parse(search);
+    const { q: query = '' } = queryString.parse(search);
 
     // Match the queryParam to the input value
     const [formValues, handleInputChange] = useForm({ searchText: query });
@@ -41,7 +41,7 @@ export const SearchScreen = ({ history }) => {
                             name='searchText'
                             value={searchText}
                             onChange={handleInputChange}
-                            />
+                        />
                         <button
                             type='submit'
                             className='btn mt-1 btn-block btn-outline-primary'
@@ -59,17 +59,17 @@ export const SearchScreen = ({ history }) => {
                     {
                         !heroesFiltered.length
                             ?
-                                <div className="alert alert-info">No heroes to show</div>
+                            <div className="alert alert-info">No heroes to show</div>
                             :
-                                <div className='card-columns animate__animated animate__fadeIn'>
-                                    <ul>
-                                        {
-                                            heroesFiltered.map(hero => 
-                                                <HeroCard key={hero.id} {...hero} />
-                                            )
-                                        }
-                                    </ul>
-                                </div>
+                            <div className='card-columns animate__animated animate__fadeIn'>
+                                <ul>
+                                    {
+                                        heroesFiltered.map(hero =>
+                                            <HeroCard key={hero.id} {...hero} />
+                                        )
+                                    }
+                                </ul>
+                            </div>
                     }
                 </div>
             </div>
